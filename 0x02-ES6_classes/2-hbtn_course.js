@@ -25,7 +25,7 @@ export default class HolbertonCourse {
 
   set name(value) {
     if (typeof value === 'string') {
-      this._value = value;
+      this._name = value;
     } else {
       throw new TypeError('Name must be a string');
     }
