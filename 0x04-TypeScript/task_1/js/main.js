@@ -1,15 +1,5 @@
-var director1 = {
-    firstName: 'John',
-    lastName: 'Doe',
-    location: 'London',
-    fullTimeEmployee: true,
-    numberOfReports: 17,
-};
-console.log(director1);
-// should print
-// Object
-// firstName: "John"
-// fullTimeEmployee: true
-// lastName: "Doe"
-// location: "London"
-// numberOfReports: 17
+function printTeacher (firstName, lastName) {
+  const output = ''.concat(firstName[0], '. ').concat(lastName);
+  return output;
+}
+console.log(printTeacher('John', 'Doe'));
