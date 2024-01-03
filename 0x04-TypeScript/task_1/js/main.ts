@@ -21,4 +21,26 @@ function printTeacher (firstName, lastName) {
     return output;
 }
 
-console.log(printTeacher("John", "Doe"))
+interface StudentClassInterface {
+    firstName: string;
+    lastName: string;
+    displayName(): string;
+}
+
+class StudentClass implements StudentClassInterface{
+    firstName: string;
+    lastName: string;
+     
+    constructor(firstName: string, lastName: string) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    displayName() {
+        return this.firstName
+    }
+}
+
+const student1: StudentClassInterface = new StudentClass('Brandon', 'Munda')
+
+console.log(student1.displayName())
