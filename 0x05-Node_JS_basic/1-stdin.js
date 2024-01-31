@@ -26,11 +26,11 @@ if (!process.stdin.isTTY) {
   });
 
   rl.on('close', () => {
-    ;
+    console.log('This important software is now closing');
   });
 
   // Listen for the SIGINT (Ctrl+C) event to gracefully exit
-//   process.on('SIGINT', () => {
-//     rl.close();
-//   });
+  process.on('SIGINT', () => {
+    rl.close();
+  });
 }
